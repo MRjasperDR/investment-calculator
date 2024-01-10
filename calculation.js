@@ -19,7 +19,7 @@ function calculate(_startAmount, _afterTime, _returnRate, _addAmount) {
     _endAmount = _endAmount * (1 + _returnRate / 100 / _addFreq) + _addAmount;
   }
 
-  let _contributed = _startAmount + _addAmount * _addFreq;
+  let _contributed = _startAmount + _addAmount * _addFreq * _afterTime;
   let _roundAmount = Math.round(100 * _endAmount) / 100;
   let _interest = _roundAmount - _contributed;
 
