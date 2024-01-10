@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <label for="startAmount">Starting Amount</label>
+      <input
+        type="number"
+        id="startAmount"
+        name="startAmount"
+        value="1000"
+      /><br />
+      <label for="afterTime">After</label>
+      <input type="number" id="afterTime" name="afterTime" value="10" /><br />
+      <label for="returnRate">Return Rate</label>
+      <input type="number" id="returnRate" name="returnRate" value="5" /><br />
+      <label for="addAmount">Additional Contribution</label>
+      <input type="number" id="addAmount" name="addAmount" value="500" /><br />
+      <label for="compound">Compound</label>
+      <input type="radio" id="anually" name="addFreq" value="1" />
+      <label for="anually">Anually</label>
+      <input type="radio" id="monthly" name="addFreq" value="12" />
+      <label for="monthly">Monthly</label>
+      <input type="radio" id="weekly" name="addFreq" value="52" />
+      <label for="weekly">Weekly</label>
+    </form>
+    <button
+      onclick="calculate(Number(startAmount.value),Number(afterTime.value), Number(returnRate.value), Number(addAmount.value))"
+    >
+      Calculate
+    </button>
+    <div id="total result">0</div>
+    <div id="contribution result">0</div>
+    <div id="interest result">0</div>
+  </body>
+  <script src="calculation.js"></script>
+</html>
