@@ -21,7 +21,7 @@ function calculate(_startAmount, _afterTime, _returnRate, _addAmount) {
 
   let _contributed = _startAmount + _addAmount * _addFreq * _afterTime;
   let _roundAmount = Math.round(100 * _endAmount) / 100;
-  let _interest = _roundAmount - _contributed;
+  let _interest = Math.round(100*(_roundAmount - _contributed))/100;
 
   resultTotal.innerHTML =
     "Total: \u20AC " +
